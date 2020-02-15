@@ -29,6 +29,11 @@
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <navigationItem key="navigationItem" title="ARDicee" id="2U2-8C-LPx">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="u8g-sd-SLQ">
+                            <connections>
+                                <action selector="removeAllDice:" destination="BV1-FR-VrT" id="h9y-Ob-9UP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="afL-Sr-q8v">
                             <connections>
                                 <action selector="rollAgain:" destination="BV1-FR-VrT" id="MeT-XZ-5jw"/>

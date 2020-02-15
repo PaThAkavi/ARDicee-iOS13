@@ -125,15 +125,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
     
-    
+    //rolls all the dice on tapping the refreash bar button
     @IBAction func rollAgain(_ sender: UIBarButtonItem) {
         rollAll()
     }
     
+    //rolls all the dice in the plane on shaking the iPhone
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         rollAll()
     }
     
+    //for removing all the dice on the plane
+    @IBAction func removeAllDice(_ sender: UIBarButtonItem) {
+        
+        if !diceArray.isEmpty {
+            for dice in diceArray {
+                dice.removeFromParentNode()
+            }
+        }
+        
+    }
     // MARK: - ARSCNViewDelegate
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
